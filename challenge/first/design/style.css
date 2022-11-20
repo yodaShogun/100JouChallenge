@@ -1,0 +1,83 @@
+body{
+    background-color: aliceblue;
+    width: 100%;
+    margin: auto;
+} 
+
+header{
+    margin-bottom: 80px;
+}
+
+header nav{
+    background-color: antiquewhite;
+    color: aliceblue;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: larger;
+}
+
+header nav a:hover{
+    text-decoration: none;
+    font-size: xx-large;
+    color:turquoise;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#imgSection,img{
+    width: 100%;
+    background-size: contain;
+    margin-bottom: 50px;
+} 
+
+body h1{
+    text-align: center;
+} 
+
+#service{
+    text-align: center;
+}
+
+#service li{
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 20px;
+    border: 30px solid black;
+    background-color: black;
+    color: yellowgreen;
+    border-radius: 50%;
+    margin-bottom: 50px;
+} 
+
+#katalog {
+    width: 100%;
+}
+
+table{ 
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+table tr{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table td{
+    border: 1px solid black;
+}
+
+table th{
+    border: 1px solid black;
+}
+

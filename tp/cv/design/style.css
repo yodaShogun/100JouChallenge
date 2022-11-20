@@ -1,0 +1,62 @@
+body{
+    margin: auto;
+    background-color: aliceblue;
+}
+
+#wrapper{
+    width: 100vw;
+    height: 18vh;
+    background-color: antiquewhite;
+    color: brown;
+    font-size: larger;
+}
+
+#headerbloc img{
+    float: left;
+    margin-right: 20px;
+}
+
+main nav{
+    margin-top: 20px;
+    color: cadetblue;
+}
+
+main nav li,a{
+    display: inline;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+#st{
+    width: 100%;
+    text-align: center;
+}
+
+#ex{
+    width: 100%;
+    text-align: center;
+}
+
+#ex  li{
+    display: inline-block;
+    margin: 20px;
+}
+
+#sp{
+    width: 100%;
+    text-align: center;
+}
+
+#sp table{
+    margin: auto;
+    width: 40%;
+    border-collapse: collapse;
+}
+
+table th{
+    border: 1px solid brown;
+}
+
+table td{
+    border: 1px solid brown;
+}

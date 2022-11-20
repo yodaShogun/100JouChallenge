@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let gameOptions = ['w','p','s'], userInput =""
+        let lengthWords = gameOptions.length
+        let userScore=0, machineScore=0
+        let randomWords=""
+
+        do{
+
+            randomWords = gameOptions[Math.floor(Math.random() * lengthWords)]
+            userInput = prompt(`Choose a letter in: ${gameOptions} or Q to exit`).toLocaleLowerCase()
+
+            if(gameOptions.includes(userInput)){
+                if(userInput === randomWords){
+                    if(confirm("Draw play again ")){
+                        if(randomWords == 'w' && userInput == 'p'){
+                            machineScore +=50
+                            alert(`user:${userScore}, player:${machineScore}`) 
+                            userScore>=50? userScore-=50 : userScore=0
+                        }
+                        else if(randomWords == 'p' && userInput == 's'){
+                            machineScore +=50
+                            alert(`user:${userScore}, player:${machineScore}`) 
+                            userScore>=50? userScore-=50 : userScore=0
+                        }
+                        else if(randomWords == 's' && userInput == 'w'){
+                            machineScore +=50
+                            alert(`user:${userScore}, player:${machineScore}`) 
+                            userScore>=50? userScore-=50 : userScore=0
+                        }
+                    }else
+                        exit(0)
+                }
+                else if(randomWords == 'w' && userInput == 'p'){
+                    machineScore +=50
+                    alert(`user:${userScore}, player:${machineScore}`) 
+                  userScore>=50? userScore-=50 : userScore=0
+                }
+                else if(randomWords == 'p' && userInput == 's'){
+                    machineScore +=50
+                    alert(`user:${userScore}, player:${machineScore}`) 
+                    userScore>=50? userScore-=50 : userScore=0
+                }
+                else if(randomWords == 's' && userInput == 'w'){
+                    machineScore +=50
+                    alert(`user:${userScore}, player:${machineScore}`) 
+                    userScore>=50? userScore-=50 : userScore=0
+                }else{
+                    userScore += 50
+                    machineScore>=50? machineScore-=50 : machineScore=0
+                    alert(`user:${userScore}, player:${machineScore}`)
+                }
+            }else{
+                alert("wrong choice")
+            }
+
+        }while(userInput != "q")
+
+    </script>
+</body>
+</html>

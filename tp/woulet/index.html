@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let chance = 5, userInput
+        const secretNumber = Math.floor(Math.random() * (500 - 1 + 1) + 1)
+        
+        while(chance>0){
+            userInput = parseInt(prompt(`Enter a number in the range 1-500 \n chance:${chance}`))
+            if(userInput<secretNumber){
+                alert("Too Small")    
+            }else if(userInput>secretNumber){
+                alert("Too Big")    
+            }
+            else if(userInput == secretNumber){
+                alert(`You Get It: ${secretNumber}`)    
+                break;
+            }
+            else{
+                alert("Null Input")    
+            }
+
+            chance--
+        }
+
+        if(chance == 0)
+            alert(`you lost chance: ${chance} \n the number was: ${secretNumber}`)
+        else
+            alert("Congratualtions You Win")
+        
+    </script>
+</body>
+</html>

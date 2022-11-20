@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let color1="", color2=""
+        let regex = /[0-9A-Fa-f]{6}/g;
+        let picasso = ""
+
+        alert("this program name is picasso \nyou'll enter an hexadecimal value{123456789abcdef}")
+
+        do{
+            color1 = prompt("Enter your first hexadecimal color: ")
+            color2 = prompt("Enter the second one: ")
+        }while((color1.length!=6 && color2.length!=6))
+
+        if((color1.match(regex)&&color2.match(regex))){
+            while(picasso.length != 6){
+                picasso += color1[Math.floor(Math.random()*6)] + color2[Math.floor(Math.random()*6)]
+            }       
+            alert(picasso)
+        }
+        else
+            alert("you're number as not an hexadecimal\nprogram ending")
+                    
+    </script>
+</body>
+</html>

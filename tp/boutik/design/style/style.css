@@ -1,0 +1,162 @@
+body{
+    margin: auto;
+    padding: auto;
+}
+
+header{
+    background-color: lightgray;
+    width: 100%;
+    height: 8vh;
+}
+
+#wrapper1{
+    display: inline-block;
+}
+
+#wrapper1 nav li{
+    list-style: none;
+    display: inline;
+    margin: 50px;
+}
+
+#wrapper1 nav a{
+    text-decoration: none;
+}
+
+#wrapper1 nav li a:focus{
+    color: black;
+}
+
+#wrapper1{
+    float: right;
+}
+
+.sectionSize{
+    width: 60%;
+}
+
+#sectionSize div{
+    width: 12%;
+    height: 25vh;
+    padding: 0.5%;
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+
+}
+
+#sectionSize{
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+}
+
+#hot{
+    width: 100%;
+    background-color:rgba(10, 28, 46, 0.632);
+}
+
+#hot h1{
+    padding-top: 20px;
+}
+
+#hotflex{
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#hotflex .hf1{
+    margin: 0px;
+}
+
+.hf1 p{
+    color: white;
+}
+
+#top{
+    width: 100%;
+    height: 60%;
+    padding-top: 60px;
+    background: url("");
+}
+
+#flex2{
+    margin: auto;
+    padding: 50px;
+    background-color:rgba(10, 28, 46, 0.632);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-items:baseline;
+}
+
+#flex2 .fl2{
+    width: 24%;
+    margin-top: 30px;
+} 
+
+#promote #circle{
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+#events {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;  
+}
+
+footer{
+    background-color:rgba(10, 28, 46, 0.632);
+    color: white;
+}
+
+#foots{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#f2_img{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.ic{
+    height: 60px;
+    width: 60px;
+    border: 0.5px solid white;
+    border-radius: 50%;
+}
+
+.ic img{
+    padding: 25%;
+    width: 50%;
+}
+
+#cp{
+    margin-top: 80px;
+    background-color:rgb(8, 8, 49);
+    text-align: center;
+    padding: 20px;
+}
+
+#cp span{
+    text-align: center;
+}
