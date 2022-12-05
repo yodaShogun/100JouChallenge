@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        #format #postList{
+            width: 20%;
+            overflow: scroll;
+        }
+        #format{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="postList">
+            
+        </div>
+        <div id="format">
+            <code>
+
+            </code>
+        </div>
+    </div>
+    <footer>
+        <span>show</span>
+        <select name="lenght"></select>
+        <span><button id="show">show</button></span>
+        <span><button>reset</button></span>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

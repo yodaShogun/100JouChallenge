@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>l1</td>
+            <td>l2</td>
+        </tr>
+    </table>
+
+    <script>
+
+        function newRow(){
+            let row = document.createElement('tr')
+            let cells = document.createElement('td')
+            row.append(cells)
+            document.getElementsByTagName('table').append(row)
+        }
+
+    </script>
+
+</body>
+</html>
