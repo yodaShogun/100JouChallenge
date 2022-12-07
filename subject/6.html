@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const countryArray = ["Haiti", "France", "United States", "Belgium", "Canada", "Jamaica", "Mexico", "Brazil", "Nigeria"];
+        let ul = document.createElement("ul")
+        let ulComponent = countryArray.map((x)=>{
+            let listElement = document.createElement("li")
+            let checkInput = document.createElement("input")
+            checkInput.type = "checkbox"
+            checkInput.value = x
+            checkInput.name = x
+            checkInput.append(`${x}`)
+            listElement.appendChild(checkInput)
+            listElement.append(`${x}`)
+            ul.appendChild(listElement)
+            document.body.appendChild(ul)
+        })
+    </script>
+</body>
+</html>
