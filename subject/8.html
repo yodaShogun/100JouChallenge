@@ -7,6 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <main>
+        <div class="group">
+            <input type="text"/>
+        </div>
+        <div class="group">
+            <input type="text"/>
+        </div>
+        <div class="group">
+            <input type="text"/>
+        </div>
+        <div class="group">
+            <input type="text"/>
+        </div>
+        <div class="group">
+            <input type="text"/>
+        </div>
+        <button>Next</button>
+    </main>
+    <script>
+        let inputArray = document.querySelectorAll("input")    
+        let i = 0
+        
+        document.querySelector("button").addEventListener("click",()=>{
+            inputArray[i].focus()
+            inputArray[i].style.borderColor= "#0275d8"
+            i == inputArray.length-1 ? i = 0 : i++
+        })
+
+    </script>
 </body>
 </html>
