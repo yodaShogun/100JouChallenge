@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id='action'>AKSYON</button>
+    <hr>
+    <div>
+        <label>Tape aksyon ou vle simile sou bouton ki anlè a, nan lis sa [click, dbclick, run]<br>Epi peze ENTER sou klavye a pou w valide</label><br>
+        <input type="text" name='event-name' placeholder="Non aksyon an..."/>
+    </div>
+    <span></span>
+    <script>
+        const validateListener = ['click','dbclick',"run"]
+        const inputAction =  document.querySelector("input")
+
+        inputAction.addEventListener("keydown",(e)=>{
+            let code = e.keyCode || e.which
+            if(code == 13){
+                if(validateListener.includes(inputAction.value)){
+                    let theEvent = new Event(`${inputAction.value}`)
+                    document.querySelector("#action").addEventListener(`${inputAction.value}`,()=>{
+                        document.querySelector("span").textContent = "Eveneman sa valid se: "+inputAction.value
+                    })
+                    dispatchEvent(theEvent)
+                }else{
+                    document.querySelector("span").textContent = "Eveneman sa pa valid"
+                }
+            }
+        })
+    </script>
 </body>
 </html>

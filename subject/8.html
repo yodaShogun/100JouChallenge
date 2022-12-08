@@ -11,28 +11,45 @@
         <div class="group">
             <input type="text"/>
         </div>
+        <br>
         <div class="group">
             <input type="text"/>
         </div>
+        <br>
         <div class="group">
             <input type="text"/>
         </div>
+        <br>
         <div class="group">
             <input type="text"/>
         </div>
+        <br>
         <div class="group">
             <input type="text"/>
         </div>
+        <br>
         <button>Next</button>
     </main>
     <script>
-        let inputArray = document.querySelectorAll("input")    
+        let nodeInput = document.querySelectorAll("input")    
         let i = 0
-        
+
+        nodeInput.item(0).focus()
+        nodeInput.item(0).style.borderColor= "#0275d8"
+
         document.querySelector("button").addEventListener("click",()=>{
-            inputArray[i].focus()
-            inputArray[i].style.borderColor= "#0275d8"
-            i == inputArray.length-1 ? i = 0 : i++
+            i++
+            nodeInput.item(i-1).blur()
+            nodeInput.item(i-1).style.borderColor= "#777"
+
+            nodeInput.item(i).focus()
+            nodeInput.item(i).style.borderColor= "#0275d8"
+            
+            if(i == nodeInput.length-1){
+                nodeInput.item(i).blur()
+                nodeInput.item(i).style.borderColor= "#777"
+                i = 0
+            }
         })
 
     </script>
