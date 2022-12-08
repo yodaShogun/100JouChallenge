@@ -46,9 +46,9 @@
             nodeInput.item(i).style.borderColor= "#0275d8"
             
             if(i == nodeInput.length-1){
-                nodeInput.item(i).blur()
-                nodeInput.item(i).style.borderColor= "#777"
                 i = 0
+                nodeInput.item(i).focus()
+                nodeInput.item(i).style.borderColor= "#0275d8"
             }
         })
 
