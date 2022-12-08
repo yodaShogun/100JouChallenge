@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1,p{
+        /* h1,p{
             -webkit-user-select: none;
             -ms-user-select: none; 
             user-select: none; 
-        } 
+        }  */
     </style>
 </head>
 <body>
@@ -23,9 +23,11 @@
 
     </main>
     <script>
-        document.querySelector("button").addEventListener("click",()=>{
-            document.querySelector("main").innerText
-            document.execCommand("copy")
+        let title = document.querySelector("h1")
+        let paragraph = document.querySelector("p")
+
+        document.querySelector("#copy").addEventListener("click",()=>{
+            navigator.clipboard.writeText(title.firstChild.textContent+" "+paragraph.firstChild.textContent)
         })
     </script>
     
