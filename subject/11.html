@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                width: 300px;
+                height: 300px;
+                background-color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <script>
+            const randPosition = document.querySelector("div")
+            randPosition.onmousemove = function(e){
+                let x = e.clientX, y = e.clientY
+                if(x>=255 || y>=255){
+                    x-= y
+                    y-= x
+                }
+                console.log(`${x},${y}`);
+                randPosition.style.backgroundColor = `rgb(${x},${y},${(x+y)/2})`
+            }
+        </script>
+    </body>
+</html>
