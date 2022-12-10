@@ -11,8 +11,12 @@
     <script>
        let timer = document.querySelector("div").getAttribute("value")
         setInterval(()=>{
-            timer <= 0? document.querySelector("div").textContent = "TimeOut" : document.querySelector("div").textContent = timer
-            timer -= 1
+                document.querySelector("div").textContent = timer
+                if(timer == 0){
+                    document.querySelector("div").textContent = "TimeOut"
+                    exit()
+                }
+                timer -= 1
         },1000)
     </script>
 </body>
