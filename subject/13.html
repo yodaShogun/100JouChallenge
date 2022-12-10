@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button>Get data</button>
+        <div class="data-wrapper">
+          
+        </div>
+      <main>
+        <script>
+            let dataArray = []
+            const trigger = document.querySelector("button")
+
+            async function getData(){
+                const get = await fetch("https://jsonplaceholder.typicode.com/todos",{
+                    method:"GET"
+                }) 
+
+                !get.ok ? document.querySelector(".data-wrapper").textContent = "Loading Error........." : dataArray = await get.json()
+                populateDom(dataArray)
+            }
+            
+            trigger.addEventListener("click",()=>{
+                getData()
+            }) 
+
+            let populateDom = (array)=>{
+                for(el in dataArray){
+                    let h3 = document.createElement("h3")
+                    let descTitle = document.createTextNode(`${dataArray[el].title}`)
+                    let checkBox = document.createElement("input")
+                    let divider = document.createElement("hr")
+                    let id = document.createTextNode(`${dataArray[el].id}`)
+                    h3.appendChild(descTitle)
+                    checkBox.type = "checkbox"
+                    if(dataArray[el].completed == true)
+                        checkBox.checked = true
+                    document.querySelector(".data-wrapper").appendChild(h3)
+                    document.querySelector(".data-wrapper").appendChild(checkBox).after(id)
+                    document.querySelector(".data-wrapper").appendChild(divider)
+                }
+            }
+
+        </script>
+</body>
+</html>
